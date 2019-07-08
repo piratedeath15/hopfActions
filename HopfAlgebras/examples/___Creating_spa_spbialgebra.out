@@ -1,0 +1,61 @@
+-- -*- M2-comint -*- hash: 228937459
+--loading configuration for package "FourTiTwo" from file /Users/moorewf/Library/Application Support/Macaulay2/init-FourTiTwo.m2
+--loading configuration for package "Topcom" from file /Users/moorewf/Library/Application Support/Macaulay2/init-Topcom.m2
+
+i1 : A = QQ{x,y,z}
+
+o1 = A
+
+o1 : NCPolynomialRing
+
+i2 : I = ncIdeal {x^2 - 1_A, y^2 - 1_A, x*y - y*x, z*x - y*z, z*y - x*z, z^2 - (1/2)*(1_A + x + y - x*y)}
+
+                       2     2                           2  1  1    1   1
+o2 = Two-sided ideal {x -1, y -1, -yx+xy, zx-yz, zy-xz, z - -y+-xy- -x- -}
+                                                            2  2    2   2
+
+o2 : NCIdeal
+
+i3 : Igb = ncGroebnerBasis(I, InstallGB => true)
+
+      2  1  1    1   1                2
+o3 = z - -y+-xy- -x- -; Lead Term = (z , 1)
+         2  2    2   2
+     zy-xz; Lead Term = (zy, 1)
+     zx-yz; Lead Term = (zx, 1)
+      2                  2
+     x -1; Lead Term = (x , 1)
+      2                  2
+     y -1; Lead Term = (y , 1)
+     yx-xy; Lead Term = (yx, 1)
+
+o3 : NCGroebnerBasis
+
+i4 : B = A/I
+
+o4 = B
+
+o4 : NCQuotientRing
+
+i5 : H = bialgebra(B,{{(x,x)},{(y,y)},{(1/2*z,z),(1/2*z,x*z),(1/2*y*z,z),(-1/2*y*z,x*z)}},{1_B,1_B,1_B})
+
+o5 = NCBialgebra{cache => CacheTable{}                                                                                                                                                                                                                                                                      }
+                 counit => NCRingMap B <--- B
+                                                    1        1         1           1
+                 deltaImg => {{(x, x)}, {(y, y)}, {(-z, z), (-z, xz), (-yz, z), (- -yz, xz)}}
+                                                    2        2         2           2
+                 deltas => MutableHashTable{...1...}
+                                                                        2         2                                                                               2  1      1            1       1
+                 inclusion => NCRingMap QQ{xx   , xx   , xx   } / {xx    -1, xx    -1, -xx   xx   +xx   xx   , xx   xx   -xx   xx   , xx   xx   -xx   xx   , xx    - -xx   +-xx   xx   - -xx   - -} <--- B
+                                             1,1    2,1    3,1       1,1       2,1        2,1  1,1   1,1  2,1    3,1  1,1   2,1  3,1    3,1  2,1   1,1  3,1    3,1   2  2,1 2  1,1  2,1  2  1,1  2
+                                                                                                   2         2                                                                               2  1      1            1       1       2         2
+                 leftTens => NCRingMap B <--- QQ{xx   , xx   , xx   , xx   , xx   , xx   } / {xx    -1, xx    -1, -xx   xx   +xx   xx   , xx   xx   -xx   xx   , xx   xx   -xx   xx   , xx    - -xx   +-xx   xx   - -xx   - -, xx    -1, xx    -1, -xx   xx   +xx   xx   , xx   xx   -xx   xx   } + More...
+                                                   1,1    2,1    3,1    1,2    2,2    3,2       1,1       2,1        2,1  1,1   1,1  2,1    3,1  1,1   2,1  3,1    3,1  2,1   1,1  3,1    3,1   2  2,1 2  1,1  2,1  2  1,1  2    1,2       2,2        2,2  1,2   1,2  2,2    3,2  1,2   2,2  3,2
+                                                                                                    2         2                                                                               2  1      1            1       1       2         2
+                 rightTens => NCRingMap B <--- QQ{xx   , xx   , xx   , xx   , xx   , xx   } / {xx    -1, xx    -1, -xx   xx   +xx   xx   , xx   xx   -xx   xx   , xx   xx   -xx   xx   , xx    - -xx   +-xx   xx   - -xx   - -, xx    -1, xx    -1, -xx   xx   +xx   xx   , xx   xx   -xx   xx   } + More...
+                                                    1,1    2,1    3,1    1,2    2,2    3,2       1,1       2,1        2,1  1,1   1,1  2,1    3,1  1,1   2,1  3,1    3,1  2,1   1,1  3,1    3,1   2  2,1 2  1,1  2,1  2  1,1  2    1,2       2,2        2,2  1,2   1,2  2,2    3,2  1,2   2,2  3,2
+                 ring => B
+
+o5 : NCBialgebra
+
+i6 : 

@@ -1,0 +1,430 @@
+undocumented {
+  --- undocumented things here.
+  (NewFromMethod,DualBialgebra,List)    
+}
+
+beginDocumentation()
+
+-------------------------
+----- Types
+-------------------------
+    
+doc ///
+   Key
+      HopfAlgebras
+   Description
+      Text
+	 This package is used to define and manipulate Hopf Algebras, with a focus on computing
+	 invariance. It relies on the the Macaulay2 package NCAlgebra, which in turn relies on 
+	 the noncommutative algebra package Bergman.
+   Subnodes
+      "Creating a bialgebra"
+///
+
+doc ///
+   Key
+      NCBialgebra
+   Headline
+      Type of a noncommutative bialgebra
+   Description
+      Text
+         This type represents a noncommutative, noncocommutative bialgebra. 
+      --Example
+      	 --PERTINANT M2 CODE HERE
+      Text
+      	 PARAGRAPH
+///
+
+doc ///
+   Key
+      BialgebraAction
+   Headline
+      Type of an action of a noncommutative bialgebra on a noncommutative algebra 
+   Description
+      Text
+         PARAGRAPH
+      --Example
+      	 --PERTINANT M2 CODE HERE
+      Text
+      	 PARAGRAPH
+   --SeeAlso
+      --RELATED KEYS HERE
+///
+
+doc ///
+   Key
+      bialgebra
+      (bialgebra, NCRing, List, List)
+   Headline
+      Define an NCBialgebra
+   Usage
+      B = bialgebra(H,deltaOutput,augOutput)
+   Inputs
+      H : NCRing
+      deltaOutput : List
+      	A List of Sequences, representing the coproduct of each generator of H.	 
+      augOutput : List
+   Outputs
+      B : NCBialgebra
+   Description
+      Text
+      --Example
+      	 --PERTINANT M2 CODE HERE
+      Text
+      	 PARAGRAPH
+   --SeeAlso
+      --RELATED KEYS HERE
+///
+
+///
+
+doc ///
+   Key
+      higherCoprod
+      (higherCoprod, NCBialgebra, ZZ)
+   Headline
+      Get the coproduct map from an NCBialgebra's ring to its nth powered tensor algebra
+   Usage
+      nDelta = higherCoprod(B, n)
+   Inputs
+      B : NCBialgebra
+      n : ZZ
+   Outputs
+      nDelta : ncMap
+   Description
+      Text
+         PARAGRAPH
+      --Example
+      	 --PERTINANT M2 CODE HERE
+      Text
+      	 PARAGRAPH
+   --SeeAlso
+      --RELATED KEYS HERE
+///
+
+doc ///
+   Key
+      tensorProductNoGB
+   Usage
+      
+   Inputs
+   Outputs
+   Headline
+      SUMMARY HERE
+   Description
+      Text
+         PARAGRAPH
+      --Example
+      	 --PERTINANT M2 CODE HERE
+      Text
+      	 PARAGRAPH
+   --SeeAlso
+      --RELATED KEYS HERE
+///
+
+doc ///
+   Key
+      isCoassociative 
+   Headline
+      SUMMARY HERE
+   Description
+      Text
+         PARAGRAPH
+      --Example
+      	 --PERTINANT M2 CODE HERE
+      Text
+      	 PARAGRAPH
+   --SeeAlso
+      --RELATED KEYS HERE
+///
+
+doc ///
+   Key
+      isCounit
+   Headline
+      SUMMARY HERE
+   Description
+      Text
+         PARAGRAPH
+      --Example
+      	 --PERTINANT M2 CODE HERE
+      Text
+      	 PARAGRAPH
+   --SeeAlso
+      --RELATED KEYS HERE
+///
+
+doc ///
+   Key
+      isBialgebra
+   Headline
+      SUMMARY HERE
+   Description
+      Text
+         PARAGRAPH
+      --Example
+      	 --PERTINANT M2 CODE HERE
+      Text
+      	 PARAGRAPH
+   --SeeAlso
+      --RELATED KEYS HERE
+///
+
+doc ///
+   Key
+      isCocommutative
+   Headline
+      SUMMARY HERE
+   Description
+      Text
+         PARAGRAPH
+      --Example
+      	 --PERTINANT M2 CODE HERE
+      Text
+      	 PARAGRAPH
+   --SeeAlso
+      --RELATED KEYS HERE
+///
+
+doc ///
+   Key
+      totalBasis
+   Headline
+      SUMMARY HERE
+   Description
+      Text
+         PARAGRAPH
+      --Example
+      	 --PERTINANT M2 CODE HERE
+      Text
+      	 PARAGRAPH
+   --SeeAlso
+      --RELATED KEYS HERE
+///
+
+doc ///
+   Key
+      findLeftIntegral
+   Headline
+      SUMMARY HERE
+   Description
+      Text
+         PARAGRAPH
+      --Example
+      	 --PERTINANT M2 CODE HERE
+      Text
+      	 PARAGRAPH
+   --SeeAlso
+      --RELATED KEYS HERE
+///
+
+doc ///
+   Key
+      findGrouplikes
+   Headline
+      SUMMARY HERE
+   Description
+      Text
+         PARAGRAPH
+      --Example
+      	 --PERTINANT M2 CODE HERE
+      Text
+      	 PARAGRAPH
+   --SeeAlso
+      --RELATED KEYS HERE
+///
+
+doc ///
+   Key
+      findAntipode
+   Headline
+      SUMMARY HERE
+   Description
+      Text
+         PARAGRAPH
+      --Example
+      	 --PERTINANT M2 CODE HERE
+      Text
+      	 PARAGRAPH
+   --SeeAlso
+      --RELATED KEYS HERE
+///
+
+doc ///
+   Key
+      bialgebraAction
+   Headline
+      SUMMARY HERE
+   Description
+      Text
+         PARAGRAPH
+      --Example
+      	 --PERTINANT M2 CODE HERE
+      Text
+      	 PARAGRAPH
+   --SeeAlso
+      --RELATED KEYS HERE
+///
+
+doc ///
+   Key
+      (ambient, BialgebraAction)
+   Headline
+      SUMMARY HERE
+   Description
+      Text
+         PARAGRAPH
+      --Example
+      	 --PERTINANT M2 CODE HERE
+      Text
+      	 PARAGRAPH
+   --SeeAlso
+      --RELATED KEYS HERE
+///
+
+doc ///
+   Key
+      (isWellDefined, BialgebraAction)
+   Headline
+      SUMMARY HERE
+   Description
+      Text
+         PARAGRAPH
+      --Example
+      	 --PERTINANT M2 CODE HERE
+      Text
+      	 PARAGRAPH
+   --SeeAlso
+      --RELATED KEYS HERE
+///
+
+doc ///
+   Key
+      actOn
+      (actOn, NCRingElement, NCRingElement, BialgebraAction)
+   Headline
+      SUMMARY HERE
+   Description
+      Text
+         PARAGRAPH
+      --Example
+      	 --PERTINANT M2 CODE HERE
+      Text
+      	 PARAGRAPH
+   --SeeAlso
+      --RELATED KEYS HERE
+///
+
+doc ///
+   Key
+      actionInDegree
+   Headline
+      SUMMARY HERE
+   Description
+      Text
+         PARAGRAPH
+      --Example
+      	 --PERTINANT M2 CODE HERE
+      Text
+      	 PARAGRAPH
+   --SeeAlso
+      --RELATED KEYS HERE
+///
+
+doc ///
+   Key
+      invariantInDegree
+   Headline
+      SUMMARY HERE
+   Description
+      Text
+         PARAGRAPH
+      --Example
+      	 --PERTINANT M2 CODE HERE
+      Text
+      	 PARAGRAPH
+   --SeeAlso
+      --RELATED KEYS HERE
+///
+
+doc ///
+   Key
+      invariantAlgebraGens
+   Headline
+      SUMMARY HERE
+   Description
+      Text
+         PARAGRAPH
+      --Example
+      	 --PERTINANT M2 CODE HERE
+      Text
+      	 PARAGRAPH
+   --SeeAlso
+      --RELATED KEYS HERE
+///
+
+doc ///
+   Key
+      invariantAlgebra
+   Headline
+      SUMMARY HERE
+   Description
+      Text
+         PARAGRAPH
+      --Example
+      	 --PERTINANT M2 CODE HERE
+      Text
+      	 PARAGRAPH
+   --SeeAlso
+      --RELATED KEYS HERE
+///
+
+
+doc ///
+   Key
+      RelDegreeLimit
+   Headline
+      SUMMARY HERE
+   Description
+      Text
+         PARAGRAPH
+      --Example
+      	 --PERTINANT M2 CODE HERE
+      Text
+      	 PARAGRAPH
+   --SeeAlso
+      --RELATED KEYS HERE
+///
+
+
+doc ///
+   Key
+      GenDegreeLimit
+   Headline
+      SUMMARY HERE
+   Description
+      Text
+         PARAGRAPH
+      --Example
+      	 --PERTINANT M2 CODE HERE
+      Text
+      	 PARAGRAPH
+   --SeeAlso
+      --RELATED KEYS HERE
+///
+
+
+doc ///
+   Key
+      "Creating a bialgebra"
+   Description
+      Text
+         PARAGRAPH
+      Example
+         A = QQ{x,y,z}
+         I = ncIdeal {x^2 - 1_A, y^2 - 1_A, x*y - y*x, z*x - y*z, z*y - x*z, z^2 - (1/2)*(1_A + x + y - x*y)}
+         Igb = ncGroebnerBasis(I, InstallGB => true)
+         B = A/I
+         H = bialgebra(B,{{(x,x)},{(y,y)},{(1/2*z,z),(1/2*z,x*z),(1/2*y*z,z),(-1/2*y*z,x*z)}},{1_B,1_B,1_B})
+///
+   
